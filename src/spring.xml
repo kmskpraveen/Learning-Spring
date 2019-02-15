@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+
+    <bean id="circle" class="Circle" >
+        <property name="center" ref="Point1"/>
+    </bean>
+
+
+    <!--<bean id="triangle" class="Triangle" name="tri_alias" autowire="constructor" >-->
+    <bean id="triangle" class="Triangle" >
+    <!--<bean id="parenttriangle" class="Triangle" >-->
+        <!--<property name="type" value="Equilateral" />-->
+        <!--<property name="height" value="10" />-->
+        <!--<constructor-arg type="int" value="10" />-->
+        <!--<constructor-arg type="java.lang.String" value="Equilateral" />-->
+        <!--<constructor-arg index="1" value="10" />-->
+        <!--<constructor-arg index="0" value="Equilateral" />-->
+
+        <property name="pointA" ref="Point1" />
+        <property name="pointB" ref="Point2" />
+        <property name="pointC" ref="Point3" />
+
+
+        <!--<property name="points">-->
+            <!--<list>-->
+                <!--<ref bean="Point1"/>-->
+                <!--<ref bean="Point2"/>-->
+                <!--<ref bean="Point3"/>-->
+            <!--</list>-->
+        <!--</property>-->
+
+        <!--<property name="pointB">-->
+            <!--<bean class="Point">-->
+                <!--<property name="x" value="-20"/>-->
+                <!--<property name="y" value="0"/>-->
+            <!--</bean>-->
+        <!--</property>-->
+        <!--<property name="pointC">-->
+            <!--<bean class="Point">-->
+                <!--<property name="x" value="0"/>-->
+                <!--<property name="y" value="20"/>-->
+            <!--</bean>-->
+        <!--</property>-->
+    </bean>
+
+
+    <!--<bean id="triangle1" parent="parenttriangle">-->
+        <!--<property name="pointB" ref="Point2"/>-->
+        <!--<property name="pointC" ref="Point3"/>-->
+    <!--</bean>-->
+
+
+    <!--<bean id="Point1" class="Point">-->
+        <!--<property name="x" value="${Point1.Xvalue}"/>-->
+        <!--<property name="y" value="${Point1.Yvalue}"/>-->
+    <!--</bean>-->
+
+    <bean id="Point1" class="Point">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <bean id="Point2" class="Point">
+        <property name="x" value="-20"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <bean id="Point3" class="Point">
+        <property name="x" value="0"/>
+        <property name="y" value="20"/>
+    </bean>
+
+    <!--<bean class="BeanFactoryPostProcessor" />-->
+
+    <!--<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />-->
+
+    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >-->
+        <!--<property name="locations" value="Pointsconfig.properties" />-->
+    <!--</bean>-->
+
+    <!--<bean class="DisplayNameBeanPostProcessor" />-->
+
+    <!--<bean id="pointA" class="Point">-->
+        <!--<property name="x" value="0"/>-->
+        <!--<property name="y" value="0"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="pointC" class="Point">-->
+        <!--<property name="x" value="-20"/>-->
+        <!--<property name="y" value="0"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="pointB" class="Point">-->
+        <!--<property name="x" value="0"/>-->
+        <!--<property name="y" value="20"/>-->
+    <!--</bean>-->
+
+    <!--<alias name="triangle" alias="tri_alias"/>-->
+
+</beans>
